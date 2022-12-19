@@ -1,0 +1,14 @@
+syntax = "proto3";
+package spider.did;
+
+
+import "spider/did/did_document.proto";
+
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "spider/x/did/types";
+
+// GenesisState defines the did module's genesis state.
+message GenesisState {
+  map<string, DIDDocumentWithSeq> documents = 1;
+}
